@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="contactApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Manager</title>
+    <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body ng-controller="AppCtrl">
+    <header class="bs-header">
+      <div class="container">
+        <h1 ng-bind="appName">Contact Manager</h1>
+        <p ng-bind="description"></p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 main-container" ui-view>
+        </div>
+      </div>
+    </div>
+
+    <script src="angular/angular.min.js"></script>
+    <script src="angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+  </body>
+</html>

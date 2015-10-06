@@ -1,15 +1,31 @@
 {
-  "name": "backbone-contact-manager",
+  "name": "angular-contact-manager",
+  "version": "0.0.0",
+  "homepage": "https://github.com/vinnu-313/backbone-contact-manager",
   "authors": [
-    "Dmytro Yarmak <dmytroyarmak@gmail.com>"
+    "Vinayaka Patil <vinnu_313@yahoo.com>"
   ],
-  "description": "Simple Backbone.js example application",
+  "description": "A simple angular.js application.",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "AngularJS",
+    "Contact",
+    "manager"
+  ],
   "license": "MIT",
   "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "bootstrap": "~3.1.0",
-    "backbone": "~1.1.0",
-    "jquery": "~2.1.0",
-    "underscore": "~1.5.2"
+    "angular": "~1.4.7",
+    "angular-bootstrap": "~0.13.4",
+    "bootstrap": "~3.3.5",
+    "angular-ui-router": "~0.2.15"
   }
 }

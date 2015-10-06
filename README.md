@@ -1,9 +1,9 @@
-Backbone Contact Manager
+AngularJS Contact Manager
 ========================
 
-Simple Backbone.js example application
+Simple Angular.js example application
 ## Demo
-http://dmytroyarmak.github.io/backbone-contact-manager
+http://vinnu-313.github.io/angular-contact-manager
 
 ## Slides
 http://dmytroyarmak.github.io/codeangels-backbone-introduction
