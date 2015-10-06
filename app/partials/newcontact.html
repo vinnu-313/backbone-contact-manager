@@ -1,15 +1,19 @@
 <h2 class="page-header text-center">{{title}}</h2>
-<form novalidate role="form" class="form-horizontal contract-form">
+<form class="form-horizontal contract-form" name="cform" novalidate ng-submit="addContact(cform.$valid)">
   <div class="form-group">
     <label class="col-sm-4 control-label">Full name:</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control contact-name-input" ng-model="contact.name" required='required'>
+      <input type="text" name="name" class="form-control contact-name-input" ng-model="contact.name" required>
+      <span ng-show="cform.name.$dirty && cform.name.$invalid && cform.name.$error.required">Name is required.</span>
     </div>
   </div>
-  <div class="form-group">
+  <div class="form-group" ng-class="{ 'has-error' : cform.email.$invalid && !cform.email.$pristine }">
     <label class="col-sm-4 control-label">Email address:</label>
     <div class="col-sm-6">
-      <input type="email" class="form-control contact-email-input" ng-model="contact.email" required='required'>
+      <input type="email" name="email" class="form-control contact-email-input" ng-model="contact.email" required>
+      <span ng-show="cform.email.$dirty && cform.email.$invalid">
+        <span ng-show="cform.email.$error.required">Email is required.</span>
+      </span>
     </div>
   </div>
   <div class="form-group">
@@ -20,7 +24,7 @@
   </div>
   <div class="form-group">
     <div class="col-sm-offset-4 col-sm-3">
-      <button type="submit" ng-click="addContact(contact)" class="btn btn-outline btn-lg btn-block">Submit</button>
+      <button type="submit" class="btn btn-outline btn-lg btn-block">Submit</button>
     </div>
     <div class="col-sm-3">
       <a ui-sref="home" class="btn btn-outline btn-lg btn-block">Cancel</a>

@@ -77,7 +77,9 @@ angular.module('contactApp.services', [])
 			contacts[contacts.indexOf(this.getContact(contact.id))] = contact;
 		},
 		deleteContact: function(id){
-			contacts.splice(contacts.indexOf(this.getContact(id)), 1);
+			if(contacts.indexOf(this.getContact(id)) >= 0) {
+				contacts.splice(contacts.indexOf(this.getContact(id)), 1);	
+			}
 		}
 	};
 }]);
