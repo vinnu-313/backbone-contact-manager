@@ -27,7 +27,7 @@ angular.module('contactApp.controller', ['contactApp.services'])
 }])
 
 .controller('EditContactCtrl', ['$scope', 'ContactsService', '$stateParams', '$state', function($scope, ContactsService, $stateParams, $state){
-	$scope.contact = ContactsService.getContact($stateParams.id);
+	$scope.contact = angular.copy(ContactsService.getContact($stateParams.id));
 	$scope.title = "Edit Contact";
 	$scope.addContact = function(valid){
 		if(valid) {
