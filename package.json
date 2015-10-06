@@ -7,8 +7,10 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "angular-mocks": "^1.4.7",
     "ejs": "2.3.3",
-    "express": "4.13.3"
+    "express": "4.13.3",
+    "karma": "^0.13.10"
   },
   "engines": {
     "node": "0.12.7"
@@ -25,5 +27,14 @@
     "heroku",
     "express"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.10",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-coverage": "^0.5.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "phantomjs": "^1.9.18"
+  }
 }

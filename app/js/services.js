@@ -2,7 +2,7 @@
 
 angular.module('contactApp.services', [])
 
-.factory('ContactsService', ['$http', function($http){
+.factory('ContactsService', [function(){
 	var contacts = [
             {
               id: 1,

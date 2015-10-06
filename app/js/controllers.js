@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('contactApp.controller', [])
+angular.module('contactApp.controller', ['contactApp.services'])
 
 .controller('AppCtrl', ['$scope', 'ContactsService', function($scope, ContactsService){
 	$scope.appName = 'Contact Manager';
